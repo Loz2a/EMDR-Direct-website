@@ -1,0 +1,182 @@
+@import "settings";
+
+// CONTACT PAGE
+.page-template-contact {
+  .introBG {
+    overflow: hidden;
+    min-height: 400px;
+
+    @media (min-width: $tablet) {
+      min-height: 100vh;
+      max-height: 100vh;
+    }
+  }
+  .contact {
+    h1, h2 {
+      font-size: 32px;
+
+      @media (min-width: $tablet) {
+        font-size: 42px;
+      }
+      @media (min-width: $large) {
+        font-size: 55px;
+      }
+    }
+    &.contact-part-1 {
+      padding: 3em 0;
+      @media (min-width: $tablet) {
+        padding: 5em 0;
+      }
+      @media (min-width: $large) {
+        padding: 8em 0 9em;
+      }
+      .contactContent {
+        
+        @media (min-width: $tablet) {
+          display: flex;
+          justify-content: space-between;
+        }
+        .social {
+          display: flex;
+          justify-content: space-between;
+          flex: 0 0 26%;
+          max-width: 200px;
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            svg {}
+            span {
+              @include halogen();
+              font-size: 12px;
+              color: $black;
+              padding: 1.25em 0 0;
+            }
+          }
+        }
+        .form {
+          flex: 0 0 55%;
+          form {
+            p {
+              margin-bottom: 0;
+              @media (min-width: $tablet) {
+                margin-bottom: 30px;
+              }
+              &:nth-last-of-type(2) {
+                margin-bottom: 30px;
+              }
+              input[type=text], input[type=email] {
+                font-size: 16px;
+                width: 100%;
+                padding: 1em;
+                border: 1px solid $black;
+                border-top-right-radius: 80px 80px;
+                border-bottom-right-radius: 80px 80px;
+                @media (min-width: $tablet) {
+                  padding: 2em;
+                }
+              }
+              textarea {
+                font-size: 16px;
+                width: 100%;
+                padding: 1em;
+                background: $pdWhite;
+                border: 1px solid $black;
+                @media (min-width: $tablet) {
+                  padding: 2em;
+                }
+              }
+              input[type=submit] {
+                @include arrowLink();
+                border: none;
+                padding: 0;
+                height: auto;
+                &:hover {
+                  background: transparent;
+                }
+              }
+              .ajax-loader {
+                position: absolute;
+              }
+              &:last-of-type {
+                @include arrowLink();
+                display: inline-block;
+                float: right;
+                margin-right: 3em;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.contact-part-2 {
+      padding: 0 0 4em;
+      @media (min-width: $tablet) {
+        padding: 0 0 7em;
+      }
+      @media (min-width: $large) {
+        padding: 0 0 9em;
+      }
+      .contactContent {
+        
+        @media (min-width: $tablet) {
+          display: flex;
+          justify-content: space-between;
+        }
+        @media (min-width: $large) {
+          margin-left: auto;
+          max-width: 900px;
+        }
+        .office-location {
+          flex: 0 0 33%;
+          @media (min-width: $large) {
+            flex: 0 0 50%;
+          }
+
+          .address {
+            @media (min-width: $tablet) {
+              padding-left: 1em;
+            }
+            h3 {
+              @include halogen();
+              margin-bottom: 0.25em;
+                font-size: 21px;
+              
+            }
+            p {
+              margin-bottom: 10px;
+            }
+            .divider {
+              display: block;
+              border-bottom: 1px solid $black;
+              margin: 1em 0;
+            }
+            a {
+              @include hoverUnderline();
+              display: inline-block;
+              color: $black;
+              text-decoration: none;
+              margin: 0 0 .5em;
+              @media (min-width: $large) {
+                font-size: 18px;
+              }
+            }
+            span {
+              display: block;
+              height: 1px;
+            }
+          }
+        }
+      }
+    }
+    &.contact-part-3 {
+      padding: 0 0 4em;
+      @media (min-width: $tablet) {
+        padding: 0 0 7em;
+      }
+      @media (min-width: $large) {
+        padding: 0 0 9em;
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+@import "scss/general";
+@import "scss/nav";
+@import "scss/footer";
+@import "scss/home";
+@import "scss/about";
+@import "scss/services";
+@import "scss/projects";
+@import "scss/team";
+@import "scss/working-with-us";
+@import "scss/insights";
+@import "scss/contact";
+
+
+
+.search {
+  margin-top: 100px;
+  header {
+    background-color: rgba($green, 0.95);
+  }
+  .newspageWrapper {
+    .newsItem {
+      width: 100%;
+      padding-bottom: 20px;
+      border-top: 1px solid #d9d9d9;
+      padding-top: 35px;
+      color: #080808;
+      &:hover {
+        color: $green;
+        .readWrapper {
+          span {
+            &:after {
+              transform: translateX(20px);
+            }
+            &:before {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+      h2 {
+        font-size: 28px;
+        @media (min-width: $tablet) {
+          font-size: 34px;
+        }
+      }
+      .readWrapper {
+        span {
+          padding: 0;
+          font-family: 'halogen',sans-serif;
+          letter-spacing: .125em;
+          font-weight: 500;
+          text-transform: uppercase;
+          position: relative;
+          font-size: 14px;
+          color: #080808;
+          &:before {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 0;
+            content: "";
+            background: #080808;
+            height: 1px;
+            transition: .25s ease;
+          }
+          &:after {
+            transition: all .3s ease;
+            position: absolute;
+            content: "";
+            display: inline-block;
+            width: 42px;
+            height: 19px;
+            background: url('../images/arrow_right_black.svg') no-repeat 50%;
+            transform: translateX(15px);
+          }
+        }
+      }
+    }
+  }
+  .topNews {
+    padding-bottom: 5em;
+  }
+  .newsIntro {
+    padding: 5em 0 2em;
+    @media (min-width: $tablet) {
+      padding: 7em 0 3em;
+    }
+    .wrapper {
+      .textWrapper {
+        h1 {
+          font-size: 32px;
+
+          @media (min-width: $tablet) {
+            font-size: 36px;
+          }
+          @media (min-width: $large) {
+            font-size: 50px;
+          }
+          @media (min-width: $xlarge) {
+            font-size: 55px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.searchReveal {
+  display: none;
+  background: #080808;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  min-height: 340px;
+  justify-content: center;
+  align-items: center;
+  z-index: 130;
+
+  @media (min-width: $tablet) {
+    height: 50vh;
+    background: $green;
+  }
+  .mobileClose {
+    height: 30px;
+    width: 30px;
+    z-index: 200;
+    position: fixed;
+    top: 25px;
+    right: 15px;  
+    &:after {
+      content: "X";
+      font-size: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      color: #f7f2eb;
+      transition: .3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+  #searchform {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    .input-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .input-group-field {
+        border-color: #fff;
+        color: #fff;
+        font-size: 24px;
+        font-weight: lighter;
+        width: 100%;
+      }
+      .input-group-button {
+        position: relative;
+        svg {
+          width: 30px;
+          height: 30px;
+          left: 5px;
+          position: relative;
+
+        }
+        input {
+          position: absolute;
+          top: 0;
+          border: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 40px;
+          height: 40px;
+          opacity: 0;
+        }
+      }
+    }
+    
+  }
+  &.visible {
+    display: flex;
+  }
+}
+.toggleWrapper {
+  @media (min-width: $tablet) {
+    display: none;
+
+  }
+}
+
+.phoneMainWrapper {
+  display: none!important;
+}
+
+.introBG .wrapper .textWrapper {
+  display: none;
+}
+
+// Hide incomplete pages
+#menu-item-173, #menu-item-172 {
+  a {
+    opacity: 0.5;
+    cursor: default;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+img.alignleft {
+  @media (min-width: $large) {
+    float: left;
+    margin-right: 1em;
+  }
+}
+img.alignright {
+  @media (min-width: $large) {
+    float: right;
+    margin-left: 1em;
+  }
+}

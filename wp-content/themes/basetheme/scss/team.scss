@@ -1,0 +1,297 @@
+@import "settings";
+
+.page-template-team {
+  margin-top: 100px;
+  header {
+    background-color: rgba($green, 0.95);
+  }
+  .teamIntro {
+    padding: 5em 0 2em;
+    @media (min-width: $tablet) {
+      padding: 10em 0 2em;
+    }
+    .teamIntroContainer {
+
+      @media (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .teamIntroImage {
+        position: relative;
+        @media (min-width: $tablet) {
+          flex: 0 0 50%;
+        }
+        img {
+          position: relative;
+          padding: 1px;
+          z-index: 0;
+        }
+      }
+      .teamIntroCopy {
+        margin-top: 40px;
+        @media (min-width: $tablet) {
+          flex: 0 0 44%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-top: 0;
+        }
+        h1 {
+          display: none;
+        }
+        div {
+          p {
+            @include dmSerif();
+            margin-bottom: 0.6em;
+            font-size: 24px;
+            line-height: 1.5;
+
+            @media (min-width: $tablet) {
+              font-size: 23px;
+            }
+            @media (min-width: $large) {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .team {
+    &.teamGrid {
+      padding: 3em 0 4em;
+      @media (min-width: $tablet) {
+        padding: 6em 0 4em;
+      }
+      .team-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .teamMemberContainer {
+          position: relative;
+          margin-bottom: 6%;
+          display: block;
+          min-height: 300px;
+          @media (min-width: $small) {
+            flex: 0 0 100%;
+          }
+          @media (min-width: $medium) {
+            flex: 0 0 46%;
+          }
+          @media (min-width: $large) {
+            min-height: 400px;
+          }
+          @media (min-width: $xlarge) {
+            min-height: 440px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            .team-description {
+              background-color: $black;
+            }
+            .arrow {
+              background-color: $black;
+            }
+          }
+          .arrow {
+            background-color: $green;
+            height: 55px;
+            width: 66px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+            transition: .3s ease;
+
+            &:after {
+              background: url('../images/arrow_right_white.svg');
+              background-position: center;
+              background-repeat: no-repeat;
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+            }
+          }
+          
+          .team-image {
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-repeat: no-repeat!important;
+            background-size: cover!important;
+            background-position: 50%!important;
+            z-index: 1;
+            pointer-events: none;
+            @include easing();
+            width: 100%;
+            height: 300px;
+
+            @media (min-width: $large) {
+              position: absolute;
+              height: 100%;
+            }
+            @media (min-width: $xlarge) {
+              height: 440px;
+            }
+          }
+          .team-description {
+            background-color: $green;
+            padding: 1em;
+            height: 173px;
+            position: relative;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: .3s ease;
+            @media (min-width: $large) {
+              opacity: 1;
+              position: absolute;
+              height: 45%;
+            }
+            @media (min-width: $xlarge) {
+              height: 35%;
+            }
+
+            .team-description-container {
+              text-align: center;
+              color: $white;
+              h2 {
+                font-size: 32px;
+              }
+              h3 {
+                @include halogen();
+                font-size: 16px;
+              }
+              .team-content {
+                font-size: 16px;
+                p {
+                  margin: 0 auto 20px;
+                }
+                a {
+                  @include hoverUnderline();
+                  color: $white;
+                  font-weight: 600;
+                  &:after {
+                    background: $white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.page-template-member {
+  header {
+    background-color: rgba(36,79,64,.95);
+  }
+  .memberIntro {
+    padding: 5em 0;
+    @media (min-width: $tablet) {
+      padding: 10em 0;
+    }
+  
+    .wrapper {
+      .copyContinued {
+        * {
+          max-width: 900px;
+        }
+        h2, h3, h4 {
+          font-size: 24px;
+
+          @media (min-width: $tablet) {
+            font-size: 28px;
+          }
+          @media (min-width: $large) {
+            font-size: 36px;
+          }
+        }
+        ul, ol {
+          padding-left: 20px;
+        }
+      }
+      .introCopy {
+        margin-bottom: 40px;
+
+        @media (min-width: $tablet) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .imageWrapper {
+          min-height: 400px;
+          margin-bottom: 60px;
+          margin-top: 60px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          @media (min-width: $tablet) {
+            flex: 0 1 50%;
+            padding-right: 20px;
+            margin-top: 0;
+            margin-bottom: 30px;
+          }
+        }
+        .rightText {
+          @media (min-width: $tablet) {
+            flex: 0 1 50%;
+            padding-left: 20px;
+          }
+          @media (min-width: $xlarge) {
+            padding-left: 60px;
+          }
+          h1 {
+            font-size: 32px;
+
+            @media (min-width: $tablet) {
+              font-size: 36px;
+            }
+            @media (min-width: $large) {
+              font-size: 50px;
+            }
+            @media (min-width: $xlarge) {
+              font-size: 55px;
+            }
+          }
+          h3 {
+            font-size: 19px;
+            margin-bottom: 60px;
+
+            @media (min-width: $tablet) {
+              margin-bottom: 30px;
+            }
+            @media (min-width: $large) {
+              font-size: 21px;
+            }
+          }
+          .jobQuals {
+            margin-bottom: 20px;
+
+            h4 {
+              font-size: 19px;
+              @media (min-width: $tablet) {
+                margin-bottom: 30px;
+              }
+              @media (min-width: $large) {
+                font-size: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

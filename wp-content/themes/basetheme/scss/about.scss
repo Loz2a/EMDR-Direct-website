@@ -1,0 +1,225 @@
+@import "settings";
+
+// ABOUT PAGE
+.page-template-about {
+  .introBG {
+    min-height: 108vw;
+    @media (min-width: $tablet) {
+      min-height: 100vh;
+    }
+    .downArrow {
+      display: none;
+      @media (min-width: $tablet) {
+        display: block;
+      }
+    }
+    .wrapper .introWrapper {
+      display: none;
+      
+      @media (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 8vh;
+        z-index: 6;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+      }
+
+      p {
+        @include dmSerif();
+        color: $pdWhite;
+        max-width: 812px;
+        text-align: center;
+        font-size: 26px;
+
+        @media (min-width: $large) {
+          font-size: 36px;
+        }
+      }
+    }
+    &:after {
+      background: rgb(8,8,8);
+      background: linear-gradient(180deg,rgba(8,8,8,.398197),rgba(8,8,8,0) 15%,rgba(8,8,8,0) 35%,rgba(8,8,8,.95));
+    }
+  }
+  .coreValues {
+    background-color: #080808;
+    padding: 50px 0 0;
+    border-bottom: 1px solid #4a4a4a;
+
+    @media (min-width: $large) {
+      border-bottom: none;
+      padding: 90px 0 0;
+
+    }
+    .wrapper {
+      .valuesWrapper {
+        @media (min-width: $tablet) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .value {
+          margin-bottom: 60px;
+          @media (min-width: $tablet) {
+            flex: 0 1 50%;
+            text-align: center;
+            padding: 0 30px;
+          }
+          @media (min-width: $large) {
+            flex: 0 1 33.33%;
+           
+          }
+        }
+      }
+    }
+    h1, h2 {
+      font-size: 32px;
+      margin-bottom: 60px;
+
+      @media (min-width: $tablet) {
+        font-size: 36px;
+      }
+      @media (min-width: $large) {
+        font-size: 50px;
+        margin-bottom: 60px;
+      }
+      @media (min-width: $xlarge) {
+        font-size: 55px;
+      }
+    }
+
+    h2,h3,p {
+      color: #F7F2EB;
+    }
+    h3 {
+      font-size: 19px;
+      @media (min-width: $tablet) {
+        font-size: 22px;
+      }
+      @media (min-width: $xlarge) {
+        font-size: 30px;
+      }
+    }
+    p {
+      font-size: 14px;
+      @media (min-width: $xlarge) {
+        font-size: 18px;
+      }
+    }
+  }
+  .about {
+    padding: 2em 0;
+
+    @media (min-width: $large) {
+      padding: 4em 0 2em;
+    }
+    .introWrapper {
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+      margin-bottom: 60px;
+      margin-top: 40px;
+      p {
+        font-size: 20px;
+      }
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+    h2 {
+      @media (min-width: $large) {
+        font-size: 50px;
+        margin-bottom: 60px;
+      }
+    }
+    h1, h2 {
+      font-size: 32px;
+
+      @media (min-width: $tablet) {
+        font-size: 36px;
+      }
+      @media (min-width: $large) {
+        font-size: 50px;
+      }
+      @media (min-width: $xlarge) {
+        font-size: 55px;
+      }
+    }
+    &.about-part-3 {
+
+    }
+    .innerWrapper {
+
+      @media (min-width: $tablet) {
+        display: flex;
+        align-items: flex-start;
+      }
+      &.aboutContent {
+        
+        padding: 2em 0;
+        @media (min-width: $tablet) {
+          display: flex;
+            justify-content: space-between;
+        }
+
+        .aboutContent1, .aboutContent2 {
+          flex: 0 0 47%;
+        }
+      }
+      .aboutVision {
+        margin-bottom: 40px;
+        @media (min-width: $tablet) {
+          flex: 0 1 65%;
+          padding-right: 10%;
+        }
+      }
+      .aboutMission {
+        margin-bottom: 40px;
+       
+        p {
+          margin-bottom: 5px;
+          font-size: 13px;
+          @media (min-width: $tablet) {
+            font-size: 14px;
+          }
+          @media (min-width: $large) {
+            font-size: 16px;
+          }
+          @media (min-width: $xlarge) {
+            font-size: 18px;
+          }
+
+        }
+        h3 {
+          font-size: 18px;
+          @media (min-width: $tablet) {
+            font-size: 20px;
+          }
+          @media (min-width: $large) {
+            font-size: 22px;
+          }
+          
+        }
+        @media (min-width: $tablet) {
+          flex: 0 1 35%;
+        }
+      }
+      .aboutVision, .aboutMission {
+      
+        h1, h2, h3, h4, h5, h6 {
+          @include halogen();
+        }
+        
+      }
+    }
+  }
+}

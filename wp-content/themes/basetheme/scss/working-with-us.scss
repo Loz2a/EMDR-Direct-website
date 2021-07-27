@@ -1,0 +1,152 @@
+@import "settings";
+
+// WORKING WITH US PAGE
+.page-template-working-with-us {
+  .introBG {
+    background: $green;
+    min-height: 550px;
+
+    @media (min-width: $large) {
+      min-height: 650px;
+    }
+    &:after {
+      display: none;
+    }
+    .wrapper .introWrapper {
+      z-index: 4;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      h2 {
+        @include halogen();
+        font-size: 20px;
+
+        @media (min-width: $large) {
+          font-size: 21px;
+        }
+      }
+      .introCopy {
+        max-width: 1060px;
+        p {
+          @include dmSerif();
+          text-align: center;
+          font-size: 21px;
+
+          @media (min-width: $tablet) {
+            font-size: 30px;
+          }
+          @media (min-width: $large) {
+            font-size: 36px;
+          }
+          strong {
+            color: $pdWhite;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+  .what-we-do {
+    padding: 4em 0 2em;
+    &.careers-part-3 {
+      padding-bottom: 4em;
+      @media (min-width: $tablet) {
+        font-size: 42px;
+      }
+    }
+    h1 {
+      font-size: 32px;
+
+      @media (min-width: $tablet) {
+        font-size: 42px;
+      }
+      @media (min-width: $large) {
+        font-size: 55px;
+        margin-bottom: 1em;
+
+      }
+     
+    }
+    .careersDevelopment {
+      margin-top: 40px;
+      h1, h2, h3, h4, h5, h6 {
+        @include halogen();
+        font-size: 20px;
+        @media (min-width: $large) {
+          font-size: 21px;
+        }
+      }
+    }
+    .innerWrapper {
+      &.careersContent {
+        
+        @media (min-width: $tablet) {
+          display: flex;
+        justify-content: space-between;
+
+        }
+        h1, h2, h3, h4, h5, h6 {
+          @include halogen();
+          @media (min-width: $large) {
+            font-size: 21px;
+          }
+        }
+        .careersContent1, .careersContent2, .careersContent3, .careersImage {
+          flex: 0 0 45%;
+          p {
+            a {
+              color: #244F40;
+              &:hover {
+                color: #080808;
+              }
+            }
+          }
+        }
+        .careersImage {
+          position: relative;
+          img {
+            position: relative;
+            padding: 1px;
+            z-index: 0;
+          }
+          svg {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+          }
+        }
+        .careersContent3 {
+          .lower {
+            a {
+              @include arrowLink();
+            }
+            p {
+              display: block;
+              margin: 1em 0 0;
+            }
+          }
+        }
+        .careerStatement {
+          @include dmSerif();
+          color: $green;
+          text-align: center;
+          max-width: 1050px;
+          margin: auto;
+          @media (min-width: $large) {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+    &.careers-part-4 {
+      margin: 3em 0 9em;
+    }
+  }
+}

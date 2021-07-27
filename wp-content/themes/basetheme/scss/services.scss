@@ -1,0 +1,567 @@
+@import "settings";
+
+// SERVICES PAGE
+.services {
+  background-color: $pdWhite;
+  position: relative;
+  padding-bottom: 5em;
+  z-index: 2;
+
+  .wrapper {
+    @include wrapper();
+    padding: 65px 20px 20px;
+    @media (min-width: $medium) {
+      padding: 65px 40px 20px;
+    }
+    @media (min-width: 1200px) {
+      padding: 65px 20px 20px;
+    }
+    .dotWrapper {
+      display: none;
+      @media (min-width: $medium) {
+        display: block;
+        position: fixed;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 3;
+        height: 100px;
+        overflow: hidden;
+      }
+
+      .showDots {
+        li {
+          font-size: 0;
+          height: 20px;
+          width: 20px;
+          margin: 5px 0;
+          a {
+            height: 20px;
+            display: block;
+            width: 20px;
+            position: relative;
+            &:after {
+              content: "";
+              background: transparent;
+              transition: 0.3s ease;
+              border: 1px solid $blue;
+              border-radius: 50%;
+              height: 14px;
+              width: 14px;
+              margin: auto 0;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+    .titleWrapper {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      // @media (min-width: $medium) {
+      //   margin-bottom: -160px;
+      // }
+      // @media (min-width: $tablet) {
+      //   margin-bottom: -140px;
+      // }
+      // @media (min-width: $large) {
+      //   margin-bottom: -80px;
+      // }
+      h2 {
+        color: $green;
+        text-transform: uppercase;
+        font-size: 38px;
+        margin-bottom: 50px;
+        font-weight: 200;
+        @media (min-width: 370px) {
+          font-size: 48px;
+          margin-bottom: 25px;
+        }
+        @media (min-width: $medium) {
+          font-size: 55px;
+          margin-bottom: 25px;
+        }
+        @media (min-width: $tablet) {
+          font-size: 75px;
+          margin-bottom: 25px;
+        }
+        @media (min-width: $large) {
+          font-size: 97px;
+          margin-bottom: 15px;
+        }
+      }
+      h4 {
+        color: $textGrey;
+        font-size: 20px;
+        margin-bottom: 60px;
+        font-weight: 400;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        @media (min-width: $large) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .servicesWrapper {
+      .link {
+        position: relative;
+        height: 0;
+        top: -150px;
+        @media (min-width: $medium) {
+          top: -370px;
+        }
+
+        @media (min-width: $large) {
+          top: -420px;
+        }
+      }
+      @media (min-width: $medium) {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+      }
+
+      .serviceWrapper {
+        margin-bottom: 60px;
+        position: relative;
+        @media (min-width: $medium) {
+          margin-bottom: 40px;
+        }
+        @media (min-width: $large) {
+          margin-bottom: 60px;
+          margin-top: 40px;
+        }
+        &.active {
+          .serviceDot {
+            opacity: 1;
+          }
+        }
+        &:nth-of-type(1) {
+          .serviceDot {
+            top: -70px;
+          }
+        }
+        &:nth-of-type(2) {
+          .serviceDot {
+            top: -20px;
+          }
+        }
+        &:nth-of-type(3) {
+          .serviceDot {
+            top: 30px;
+          }
+        }
+        &:nth-of-type(4) {
+          .serviceDot {
+            top: 80px;
+          }
+        }
+        .serviceDot {
+          display: none;
+          @media (min-width: $medium) {
+            display: block;
+            opacity: 0;
+            background: $blue;
+            transition: 1s ease;
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            position: fixed;
+            bottom: 0;
+            z-index: 99;
+            pointer-events: none;
+            right: 12px;
+            margin: auto 0;
+          }
+        }
+        .anchors {
+          height: 0;
+          width: 100%;
+          position: relative;
+          top: -150px;
+        }
+        @media (min-width: $medium) {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          &:nth-of-type(even) {
+            flex-direction: row-reverse;
+            .leftSide {
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+        }
+       
+        @media (min-width: $medium) {
+          .rightSide {
+            img {
+              transition-delay: 1s !important;
+            }
+          }
+        }
+      
+
+        &:nth-of-type(odd) {
+          .rightSide {
+            @media (min-width: $tablet) {
+              padding-left: 30px;
+            }
+          }
+        }
+        &:nth-of-type(even) {
+          .leftSide {
+            @media (min-width: $large) {
+              flex: 0 1 calc(50% - 20px);
+            }
+
+            .textWrapper {
+              @media (min-width: $tablet) {
+                margin-right: auto;
+                margin-left: 40px;
+              }
+            }
+          }
+          .rightSide {
+            img {
+              max-height: 520px;
+            }
+            @media (min-width: $large) {
+              flex: 0 1 calc(50% - 20px);
+            }
+          }
+        }
+
+        .leftSide {
+          margin-bottom: 40px;
+          @media (min-width: $medium) {
+            flex: 0 1 calc(50% - 20px);
+            margin-bottom: 0;
+          }
+          @media (min-width: $large) {
+            flex: 0 1 calc(40% - 20px);
+          }
+          .service_section_image {
+            position: relative;
+            img {
+              position: relative;
+              max-width: 100%;
+              padding: 1px;
+              z-index: 0;
+              
+            }
+            svg {
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              height: 100%;
+              //right: -1px;
+              //height: 101%;
+            }
+          }
+        }
+        .rightSide {
+          margin: -30px 0 0;
+          
+          @media (min-width: $medium) {
+            margin: 0;
+            flex: 0 1 calc(50% - 20px);
+            display: flex;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+          }
+          @media (min-width: $large) {
+            flex: 0 1 calc(60% - 20px);
+            margin: -30px 0 -60px;
+          }
+          .textWrapper {
+            @media (min-width: $tablet) {
+              //max-width: 400px;
+              margin-left: auto;
+            }
+            .desc {
+              line-height: 1.75;
+              margin-bottom: 2em;
+              @media (min-width: $large) {
+                margin-bottom: 5em;
+              }
+            }
+          }
+          h3 {
+            margin-bottom: 40px;
+            font-size: 26px;
+            @media (min-width: $tablet) {
+              font-size: 31px;
+            }
+            @media (min-width: $large) {
+              font-size: 3.5rem;
+            }
+          }
+          p {
+            color: $textBlack;
+            font-size: 18px;
+            margin-bottom: 30px;
+            @media (min-width: $tablet) {
+              font-size: 21px;
+            }
+            @media (min-width: $large) {
+              font-size: 24px;
+            }
+          }
+
+          li {
+            color: $textBlack;
+            font-size: 18px;
+          }
+
+          a {
+            @include arrowLink();
+          }
+        }
+      }
+    }
+  }
+}
+
+.services {
+  background-color: #fbfbfb;
+  .wrapper {
+    .servicesWrapper {
+      .serviceWrapper {
+        .leftSide {
+          .textWrapper {
+            max-width: 100%;
+
+            h3 {
+              position: relative;
+              &:after {
+                top: -30px;
+                font-size: 18px;
+                color: $textGrey;
+                left: 0;
+                position: absolute;
+              }
+            }
+          }
+          p {
+            font-size: 18px;
+          }
+          ul {
+            li {
+              margin-bottom: 10px;
+              //@include blueBullet();
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-template-services {
+  .servicesHeader {
+    background-color: $pdWhite;
+    display: block;
+    #servicesTop {
+      position: relative;
+      height: 0;
+      top: 0;
+      @media (min-width: $tablet) {
+        top: -100px;
+      }
+    }
+    .wrapper {
+      .titleWrapper {
+        h2 {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .services {
+    background-color: $pdWhite;
+    .wrapper {
+      .servicesWrapper {
+        .serviceWrapper {
+          .leftSide {
+            .textWrapper {
+              max-width: 100%;
+
+              h3 {
+                position: relative;
+                &:after {
+                  top: -30px;
+                  font-size: 18px;
+                  color: $textGrey;
+                  left: 0;
+                  position: absolute;
+                }
+              }
+            }
+            p {
+              font-size: 18px;
+            }
+            ul {
+              li {
+                margin-bottom: 10px;
+                //@include blueBullet();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-template-services {
+  .services {
+    .wrapper {
+      .servicesWrapper {
+        .serviceWrapper {
+          .leftSide {
+            @media (min-width: $medium) {
+              flex: 0 1 100%;
+              margin-bottom: 60px;
+            }
+            @media (min-width: $tablet) {
+              flex: 0 1 calc(42% - 20px);
+              margin-bottom: 0;
+              max-width:calc(42% - 20px);
+
+            }
+          }
+          .rightSide {
+            @media (min-width: $medium) {
+              flex: 0 1 100%;
+            }
+            @media (min-width: $tablet) {
+              flex: 0 1 calc(58% - 20px);
+              max-width:calc(58% - 20px);
+            }
+          }
+        }
+        .link {
+          @media (min-width: $medium) {
+            top: -150px;
+          }
+        }
+      }
+    }
+  }
+}
+.page-template-services {
+  .introBG {
+    min-height: 490px;
+
+  }
+}
+// INDIVIDUAL SERVICE PAGE
+.page-template-service {
+  header.site-header {
+    background: $green;
+  }
+  .introBG {
+    min-height: 0;
+    display: none;
+  }
+  .service-banner-section {
+    margin-top: 8em;
+    @media (min-width: $tablet) {
+      margin-top: 10em;
+    }
+    @media (min-width: $large) {
+      margin-top: 12em;
+    }
+
+    .link-container {
+      a {
+        @include arrowLink();
+      }
+    }
+    .service-banner {
+      padding: 3em 0;
+
+      @media (min-width: $large) {
+        padding: 5em 0;
+      }
+
+      .service-banner-continer {
+        position: relative;
+          img {
+            position: relative;
+            //max-width: 500px;
+            padding: 1px;
+            z-index: 0;
+          }
+          svg {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+          }
+      }
+    }
+    .service-title {
+      .textWrapper {
+        h1 {
+          @media (min-width: 370px) {
+            font-size: 30px;
+          }
+          @media (min-width: $medium) {
+            font-size: 38px;
+          }
+          @media (min-width: $tablet) {
+            font-size: 48px;
+          }
+          @media (min-width: $large) {
+            font-size: 58px;
+          }
+        }
+      }
+    }
+  }
+  .service {
+    .service-content {
+      max-width: 674px;
+      margin: 3em auto 3em;
+      @media (min-width: $large) {
+        margin: 6em auto 8em;
+        max-width: calc(674px + 15%);
+        padding-left: 15%;
+      }
+
+      h3 {
+        font-family: 'halogen', sans-serif;
+        text-transform: uppercase;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        @media (min-width: $tablet) {
+          font-size: 20px;
+        }
+        @media (min-width: $large) {
+          font-size: 21px;
+        }
+      }
+      p {}
+      ul {
+        @include pdList();
+        
+      }
+    }
+  }
+}

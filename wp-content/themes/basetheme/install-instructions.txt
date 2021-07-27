@@ -1,0 +1,4 @@
+cd into theme
+git init
+npm install
+gulp

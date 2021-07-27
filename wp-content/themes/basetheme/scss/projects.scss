@@ -1,0 +1,325 @@
+@import "settings";
+
+.post-type-archive-projects {
+  margin-top: 100px;
+  header {
+    background-color: rgba($green, 0.95);
+  }
+  .projectsIntro {
+    padding: 0 0 2em;
+    @media (min-width: $tablet) {
+      padding: 5em 0 2em;
+    }
+    @media (min-width: $large) {
+      padding: 8em 0 2em;
+    }
+
+    .projectsIntroContainer {
+      
+      @media (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .projectsIntroImage {
+        position: relative;
+        margin-top: 40px;
+        @media (min-width: $tablet) {
+          flex: 0 0 45%;
+          margin-top: 0;
+        }
+        img {
+          position: relative;
+          z-index: 0;
+          max-height: 500px;
+          max-width: 100%;
+        
+        }
+        svg {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+        }
+      }
+      .projectsIntroCopy {
+        flex: 0 0 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 60px;
+        @media (min-width: $tablet) {
+          padding-top: 0;
+        }
+        h1 {
+          @include halogen();
+          
+          @media (min-width: $large) {
+            font-size: 21px;
+          }
+        }
+        div {
+          p {
+            @include dmSerif();
+            margin-bottom: 0.6em;
+            line-height: 1.5;
+            font-size: 24px;
+  
+            @media (min-width: $large) {
+              font-size: 28px;
+            }
+            @media (min-width: $xlarge) {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .projectsArchive {
+    padding: 1em 0 3em;
+    @media (min-width: $tablet) {
+      padding: 3em 0;
+    }
+    @media (min-width: $large) {
+      padding: 5em 0;
+    }
+
+    .tag-filters {
+      margin: 0 1% 4em;
+      h5 {
+        font-weight: 700
+      }
+      .space {
+        @include halogen();
+        display: inline-block;
+        margin-bottom: 1em;
+        font-size: 14px;
+        @media (min-width: $tablet) {
+          margin-bottom: 2em;
+        }
+        
+        &:after {
+          content: "|";
+          padding: 0 2em;
+        }
+        &:last-of-type {
+          &::after {
+            display: none;;
+          }
+        }
+      }
+      .project-tag {
+        @include hoverUnderline();
+        cursor: pointer;
+      }
+    }
+    .projectsGrid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .projectWrapper {
+        display: block;
+        float: left;
+        width: 100%;
+        margin: 0 0 2em;
+        @media (min-width: $medium) {
+          width: 48%;
+          margin: 0 1% 4em;
+        }
+        @media (min-width: $tablet) {
+          width: 31.333333333%;
+          margin: 0 1% 8em;
+        }
+
+        .innerProjectWrapper {
+          margin-bottom: 2em;
+          .overlay {}
+          img {}
+        }
+        .innerProjectIntro {
+          color: $black;
+          p {
+            margin-bottom: 0.75em;
+            .underline {
+              @include dmSerif();
+
+              @media (min-width: $large) {
+                font-size: 32px;
+                line-height: 1.5;
+              }
+            }
+          }
+          .innerProjectTags {
+            @media (min-width: $large) {
+              height: 22px;
+              overflow: hidden;
+            }
+            span {
+              @include halogen();
+
+              @media (min-width: $large) {
+                font-size: 16px;
+              }
+              &:after {
+                content: " | ";
+              }
+              &:last-of-type {
+                &:after {
+                  content: "";
+                }
+              }
+            }
+          }
+          p.innerProjectLink {
+            @include arrowLink();
+            display: inline-block;
+            margin-top: 2em;
+
+            @media (min-width: $large) {
+              margin-top: 4em;
+            }
+          }
+        }
+      }
+    }
+  }
+  // UNDERLINE PROJECTS 
+  header .desktopNav ul li.menu-item-27 a:after {
+    width: 100%!important;
+  }
+}
+.single-projects {
+  header {
+    background-color: $green;
+  }
+  main {
+    margin-top: 80px;
+  }
+  .postIntro {
+    overflow: hidden;
+    min-height: auto;
+    margin-bottom: 3em;
+    
+
+    @media (min-width: $tablet) {
+      max-height: calc(100vh - 80px);
+      margin-bottom: 4em;
+    }
+    @media (min-width: $large) {
+      margin-bottom: 6em;
+    }
+
+    &:after {
+      background: #080808;
+      background: linear-gradient(180deg,rgba(8,8,8,.6),rgba(8,8,8,0) 15%,rgba(8,8,8,0) 85%,rgba(8,8,8,.6));
+    }
+    .videoWrapper {
+      max-height: calc(100vh - 80px);
+      width: 100vw;
+    }
+    .projectBannerWrapper {
+      max-width: 100%;
+      max-height: 100vh;
+      @media (min-width: $large) {
+        max-width: calc(100vw - 17px);
+      }
+      overflow: hidden;
+      .slick-prev, .slick-next {
+        display: none!important;
+      }
+      ul.slick-dots {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        bottom: 17px;
+        margin: auto;
+        li {
+          font-size: 0;
+          width: 14px;
+          height: 14px;
+          border: 1px solid #fff;
+          border-radius: 100%;
+          margin: 0 4px;
+          cursor: pointer;
+          &.slick-active {
+            background: $white;
+          }
+        }
+      }
+    }
+  }
+  .project {
+    padding-bottom: 5em;
+    .projectTitle {
+      margin-bottom: 4em;
+      @media (min-width: $large) {
+        margin-bottom: 7em;
+      }
+
+      h1 {
+        display: block;
+        font-size: 32px;
+
+        @media (min-width: $tablet) {
+          font-size: 42px;
+        }
+        @media (min-width: $large) {
+          font-size: 55px;
+        }
+      }
+      span {
+        @include halogen();
+        display: inline-block;
+        @media (min-width: $large) {
+          font-size: 21px;
+        }
+        &:after {
+          content: " | ";
+        }
+        &:last-of-type {
+          &:after {
+            content: "";
+          }
+        }
+      }
+    }
+    .projectContent {
+      padding-bottom: 3em;
+
+      @media (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 6em;
+
+      }
+      .first {
+        @media (min-width: $tablet) {
+          flex: 0 0 45%;
+        }
+      }
+      .second {
+        @media (min-width: $tablet) {
+          flex: 0 0 45%;
+        }
+      }
+      .first, .second {
+        h1, h2, h3, h4, h5, h6 {
+          @include halogen();
+          @media (min-width: $large) {
+            font-size: 21px;
+          }
+        }
+        ul {
+          @include pdList();
+        }
+      }
+    }
+    a.backLink {
+      @include arrowLink();
+    }
+  }
+}
