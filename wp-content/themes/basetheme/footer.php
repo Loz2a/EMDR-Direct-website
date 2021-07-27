@@ -8,12 +8,12 @@
   
 
   <div class="topFooter">
-    <h2>Get in touch for more information</h2>
-    <a href="mailto:hello@pooledick.co.uk">hello@pooledick.co.uk</a>
+    <h2>EMDR Direct</h2>
+    <a href="mailto:help@emdrdirect.com">help@emdrdirect.com</a>
   </div>
 
 <div class="wrapper">
-
+<!--
     <div class="upperFooter">
       <div class="footerLogo">
         <a href="/">
@@ -105,7 +105,7 @@
         </a>
       </div>
     </div>
-
+  -->
   </div>
 </footer>
 
