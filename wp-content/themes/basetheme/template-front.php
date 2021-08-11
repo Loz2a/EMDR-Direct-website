@@ -10,28 +10,12 @@ Template name: Front page
 
     <body <?php body_class(); ?>>
         
-        <main>
-
-            <section class="introBG" style="background-image: url(<?php the_field('header_image'); ?>);">
-                <div class="bg"></div>
-                <div class="wrapper">
-                    
-                    <div class="textWrapper">
-                        <h1 class="reveal"><?php the_title(); ?></h1>
-                    </div>
-                    
-                    <div class="downWrapper">
-                        <a class="smooth goingDown" href="#home-intro">
-                            <svg class="downArrow" xmlns="http://www.w3.org/2000/svg" width="14.212" height="13.985" viewBox="0 0 14.212 13.985"><g transform="translate(-784.215 -694.253)"><path d="M0,0,6.753,6.753,0,13.505" transform="translate(798.074 700.778) rotate(90)" fill="none" stroke="#ffffff" stroke-width="1"/><path d="M0,0,6.753,6.753,0,13.505" transform="translate(798.074 694.607) rotate(90)" fill="none" stroke="#ffffff" stroke-width="1"/></g></svg>
-                        </a>
-                    </div>
-                   
-                </div>
-            </section>        
+        <main>       
 
             <section id="home-intro" class="section home-section home-intro">
                 <div class="wrapper">
                     <div class="innerWrapper">
+                    <h1 class="reveal"><?php the_title(); ?></h1>
                         <div class="innerText">
                             <?php the_field('intro_text'); ?>
                         </div>

@@ -2,16 +2,10 @@
 
 
 .home {
-  .introBG {
-    overflow: hidden;
-    min-height: 400px;
-
-    @media (min-width: $tablet) {
-      min-height: 100vh;
-      max-height: 100vh;
-    }
-  }
+  background: rgb(247,246,242);
+  background: linear-gradient(180deg, rgba(247,246,242,1) 4%, rgba(242,212,151,1) 40%, rgba(183,209,177,1) 70%, rgba(247,246,242,1) 100%);
 }
+
 .home-section {
   
   // HOMEPAGE GENERAL
