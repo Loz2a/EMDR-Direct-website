@@ -1,167 +1,15 @@
 @import "scss/settings";
 @import "scss/general";
 
-@keyframes greenToWhite {
-  0% {
-    color: $green;
-  }
-  100% {
-    color: $white;
-  }
-}
-@keyframes logoGreenToWhite {
-  0% {
-    fill: $green;
-  }
-  100% {
-    fill: $white;
-  }
-}
-@keyframes toggleBorder {
-  0% {
-    border: 1px solid $white;
-  }
-  100% {
-    border: 1px solid $green;
-  }
-}
-@keyframes toggleBorder {
-  0% {
-    border: 1px solid $green;
-  }
-  100% {
-    border: 1px solid $white;
-  }
-}
-@keyframes toggleBG {
-  0% {
-    background-color: $green;
-  }
-  100% {
-    background-color: $white;
-  }
-}
-@keyframes loginButton {
-  0% {
-    background-color: $green;
-  }
-  100% {
-    background-color: $black;
-  }
-}
-
 .home {
   header {
     @media (min-width: $tablet) {
-      background-color: transparent;
+      background-color: #f7f6f2;
     }
-    // .toggle-btn {
-    //   animation-name: toggleBorder;
-    //   animation-fill-mode: both;
-    //   animation-timing-function: ease-in-out;
-    //   animation-iteration-count: 1;
-    //   animation-duration: 1s;
-    //   animation-delay: 2.5s;
-
-    //   .bar {
-    //     animation-name: toggleBG;
-    //     animation-fill-mode: both;
-    //     animation-timing-function: ease-in-out;
-    //     animation-iteration-count: 1;
-    //     animation-duration: 1s;
-    //     animation-delay: 2.5s;
-    //   }
-    // }
-    // .logoWrapper {
-    //   svg {
-    //     path {
-    //       animation-name: logoGreenToWhite;
-    //       animation-fill-mode: both;
-    //       animation-timing-function: ease-in-out;
-    //       animation-iteration-count: 1;
-    //       animation-duration: 1s;
-    //       animation-delay: 2.5s;
-    //     }
-    //   }
-    // }
-    // .desktopNav {
-    //   ul {
-    //     li {
-    //       &:nth-of-type(1),
-    //       &:nth-of-type(2),
-    //       &:nth-of-type(3),
-    //       &:nth-of-type(4),
-    //       &:nth-of-type(5) {
-    //         a {
-    //           animation-name: greenToWhite;
-    //           animation-fill-mode: both;
-    //           animation-timing-function: ease-in-out;
-    //           animation-iteration-count: 1;
-    //           animation-duration: 1s;
-    //         }
-    //       }
-    //       &:nth-of-type(1) {
-    //         a {
-    //           animation-delay: 3s;
-    //         }
-    //       }
-    //       &:nth-of-type(2) {
-    //         a {
-    //           animation-delay: 3.1s;
-    //         }
-    //       }
-    //       &:nth-of-type(3) {
-    //         a {
-    //           animation-delay: 3.2s;
-    //         }
-    //       }
-    //       &:nth-of-type(4) {
-    //         a {
-    //           animation-delay: 3.3s;
-    //         }
-    //       }
-    //       &:nth-of-type(5) {
-    //         a {
-    //           animation-delay: 3.4s;
-    //         }
-    //       }
-    //       &:last-of-type {
-    //         > a {
-    //           animation-name: loginButton;
-    //           animation-fill-mode: both;
-    //           animation-timing-function: ease-in-out;
-    //           animation-iteration-count: 1;
-    //           animation-duration: 1s;
-    //           animation-delay: 3.5s;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-  }
-}
-@keyframes revealItems {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
+// MOBILE
 .toggleWrapper {
   position: absolute;
   z-index: 110;
@@ -286,7 +134,6 @@ header {
     @media (min-width: $tablet) {
       background-color: #f7f6f2;
       position: fixed;
-      box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.3);
       transform: translateY(0);
     }
   }
@@ -294,7 +141,7 @@ header {
   .wrapper {
     @include wrapper();
     max-width: 1400px;
-    padding: 15px 20px 10px;
+    padding: 15px 20px 0;
     position: relative;
     @media (min-width: $tablet) {
       display: flex;
@@ -347,41 +194,19 @@ header {
         font-weight: 400;
         font-size: 15px;
         margin-right: 9px;
-        padding: 1.5em 0;
-        animation-name: revealItems;
-        animation-fill-mode: both;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-duration: 0.5s;
+        padding: 1.5em 0 1em;
+
+        // LOGO
+        &#menu-item-261 {
+          a {
+            font-size: 1.125rem;
+            font-weight: 600;
+          }
+        }
 
 
         @media (min-width: $tablet) {
           margin-right: 13px;
-        }
-
-        &:nth-of-type(1) {
-          animation-delay: 0.75s;
-        }
-        &:nth-of-type(2) {
-          animation-delay: 0.85s;
-        }
-        &:nth-of-type(3) {
-          animation-delay: 0.95s;
-        }
-        &:nth-of-type(4) {
-          animation-delay: 1.05s;
-        }
-        &:nth-of-type(5) {
-          animation-delay: 1.15s;
-        }
-        &:nth-of-type(6) {
-          animation-delay: 1.25s;
-        }
-        &:nth-of-type(7) {
-          animation-delay: 1.35s;
-        }
-        &:nth-of-type(8) {
-          animation-delay: 1.45s;
         }
        
         &.current_page_item {
@@ -393,14 +218,11 @@ header {
         }
 
         a {
-          font-family: 'halogen', sans-serif;
-          //letter-spacing: 0.125em;
+          //font-family: 'halogen', sans-serif;
           font-weight: 500;
-          text-transform: uppercase;
           font-size: 0.65rem;
           color: #000;
           position: relative;
-          max-width: 105px;
           display: inline-block;
           @media (min-width: $tablet) {
             font-size: 0.65rem;
@@ -410,7 +232,7 @@ header {
           }
           &:after {
             position: absolute;
-            bottom: 0;
+            bottom: -10px;
             left: 0;
             width: 0;
             content: "";
