@@ -21,11 +21,11 @@ h1,
 h2,
 h3,
 h4 {
-  @include dmSerif();
+  @include font2();
 }
 h5,
 h6 {
-  @include halogen();
+  @include font1();
 }
 
 h1,
@@ -39,11 +39,11 @@ h6 {
 
 p,
 li {
-  @include montserrat();
+  @include font2();
 }
 
 a.link, a.button {
-  @include halogen();
+  @include font1();
 }
 
 html {
@@ -55,6 +55,10 @@ html {
   @media (min-width: $tablet) {
     padding: 0;
   }
+}
+
+main {
+  padding-top: 116px;
 }
 
 .wrapper {
@@ -225,6 +229,14 @@ html {
   word-break: break-word;
   word-wrap: break-word;
 }
+
+#section1 {
+  padding-top: 10em;
+}
+#section2 {}
+#section3 {}
+#section4 {}
+#section5 {}
 
 /* Screen Reader Text ------------------------ */
 
@@ -1572,7 +1584,7 @@ body {
   }
 }
 .page-template-member a.backLink {
-  font-family: 'halogen',sans-serif;
+  font-family: 'font1',sans-serif;
   letter-spacing: .125em;
   font-weight: 500;
   text-transform: uppercase;

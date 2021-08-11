@@ -5,8 +5,7 @@
 .footerContact {}
 
 #footer {
-  background-color: #8e8e8e;
-  color: $white;
+  color: $black;
   z-index: 5;
   clear: both;
   //float: left;
@@ -23,7 +22,7 @@
     margin-right: auto;
     p {
       color: #244F40;
-      @include dmSerif();
+      @include font2();
       font-size: 24px;
 
       @media (min-width: $tablet) {
@@ -192,7 +191,7 @@
   
   
   a {
-    color: $white;
+    color: $black;
     position: relative;
     &:after {
       position: absolute;
@@ -200,14 +199,14 @@
       left: 0;
       width: 0%;
       content: "";
-      background: $white;
+      background: $black;
       height: 1px;
       transition: 0.25s ease;
     }
     &:hover {
       //color: $green;
       &:after {
-        color: $white;
+        color: $black;
         width: 100%;
       }
     }

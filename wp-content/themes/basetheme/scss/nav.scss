@@ -119,14 +119,14 @@ header {
   top: 0;
   width: 100%;
   //background-color: $white;
-  height: 80px;
+  height: 116px;
 
   @media (min-width: $tablet) {
     box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0);
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 116px;
     position: absolute;
     // background-color: transparent;
   }
@@ -141,7 +141,7 @@ header {
   .wrapper {
     @include wrapper();
     max-width: 1400px;
-    padding: 15px 20px 0;
+    padding: 0 20px;
     position: relative;
     @media (min-width: $tablet) {
       display: flex;
@@ -187,25 +187,26 @@ header {
     left: -10px;
     ul#menu-home-menu {
       li {
+        @include font1();
         list-style: none;
         position: relative;
         background: transparent;
         text-align: center;
         font-weight: 400;
-        font-size: 15px;
         margin-right: 9px;
-        padding: 1.5em 0 1em;
+        padding: 0.5em 0 0.9em;
 
         // LOGO
         &#menu-item-261 {
           a {
-            font-size: 1.125rem;
+            font-size: 1.5rem;
             font-weight: 600;
             &:before {
               content: "";
               display: block;
-              width: 100px;
-              height: 50px;
+              width: 80%;
+              height: 40px;
+              margin: auto;
               background: url(../images/logo.svg) 50% no-repeat;
               background-size: contain;
             }
@@ -226,17 +227,17 @@ header {
         }
 
         a {
-          //font-family: 'halogen', sans-serif;
+          //font-family: 'font1', sans-serif;
           font-weight: 500;
           font-size: 0.65rem;
           color: #000;
           position: relative;
           display: inline-block;
           @media (min-width: $tablet) {
-            font-size: 0.65rem;
+            font-size: 1rem;
           }
           @media (min-width: $large) {
-            font-size: 0.75rem;
+            font-size: 1.125rem;
           }
           &:after {
             position: absolute;
@@ -368,7 +369,7 @@ header {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 0;
-        align-items: center;
+        align-items: baseline;
       }
     }
   }

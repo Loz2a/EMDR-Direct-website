@@ -29,7 +29,7 @@ $xxlarge: 1440px;
 
 // colours
 $textBlack: #404040;
-$black: #080808;
+$black: #423845;
 $white: #ffffff;
 $pdWhite: #F7F2EB;
 $green: #244F40;
@@ -43,19 +43,13 @@ $grey: #ededed;
 $textGrey: #9d9d9d;
 
 // Fonts
-@mixin halogen {
-  font-family: 'halogen', sans-serif;
-  letter-spacing: 0.125em;
-  font-weight: 500;
-  text-transform: uppercase;
+@mixin font1 {
+  font-family: nimbus-sans, sans-serif;
+  font-style: normal;
 }
-@mixin dmSerif {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-}
-@mixin montserrat {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+@mixin font2 {
+  font-family: montserrat, sans-serif;
+  font-style: normal;
 }
 
 @mixin absoluteCenter {
@@ -108,7 +102,7 @@ $textGrey: #9d9d9d;
 }
 
 @mixin arrowLink {
-  @include halogen();
+  @include font1();
   position: relative;
   font-size: 14px;
   color: $black;

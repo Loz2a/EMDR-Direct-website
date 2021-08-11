@@ -31,7 +31,7 @@
       }
 
       p {
-        @include dmSerif();
+        @include font2();
         color: $pdWhite;
         max-width: 812px;
         text-align: center;
@@ -216,7 +216,7 @@
       .aboutVision, .aboutMission {
       
         h1, h2, h3, h4, h5, h6 {
-          @include halogen();
+          @include font1();
         }
         
       }

@@ -13,31 +13,6 @@
     line-height: 1.5;
   }
 
-  &.home-intro {
-    .innerText {
-      padding: 50px 0;
-      max-width: 900px;
-      @media (min-width: $large) {
-        padding: 90px 0 50px;        
-      }
-      h1 {
-        font-size: 28px;
-
-        @media (min-width: $tablet) {
-          font-size: 36px;
-        }
-        @media (min-width: $large) {
-          font-size: 50px;
-          margin-bottom: 60px;
-        }
-        @media (min-width: $xlarge) {
-          font-size: 55px;
-        }
-
-      }
-    }
-
-  }
   // HOME STATEMENT
   &.home-statement {
     padding: 0 0 3em;
@@ -62,28 +37,15 @@
 
         }
         .textContainer {
-          @include absoluteCenter();
-          margin: auto;
-          z-index: 1;
-          background-color: #244f40;
-          @media (min-width: $tablet) {
-            background-color: transparent;
-          }
           div{
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            padding-bottom: 6%;
             h2 {
               z-index: 1;
               font-size: 1.4rem;
               line-height: 1.4;
-              text-align: center;
+              text-align: left;
               margin: 0;
               max-width: 915px;
-              padding: 15px 60px;
+              padding: 0;
 
               @media (min-width: $tablet) {
                 font-size: 1.5rem;
@@ -102,6 +64,12 @@
           }
         }
       }
+    }
+    .divider {
+      height: 790px;
+      width: 1px;
+      border: 1px solid #423845;
+      margin: 0 30%;
     }
   }
 
@@ -347,7 +315,7 @@
               }
             }
             p {
-              @include halogen();
+              @include font1();
               display: block;
               font-size: 1.25rem;
               text-align: center;
