@@ -8,231 +8,121 @@
   color: $black;
   z-index: 5;
   clear: both;
-  //float: left;
   width: 100%;
   position: relative;
   margin-top: 40px;
   overflow: hidden;
   padding: 5em 0 3em;
-  
-  .signOff {
-    padding: 0 20px 60px;
-    max-width: 812px;
-    margin-left: auto;
-    margin-right: auto;
-    p {
-      color: #244F40;
-      @include font2();
-      font-size: 24px;
-
-      @media (min-width: $tablet) {
-        font-size: 28px;
-      }
-      @media (min-width: $large) {
-        font-size: 36px;
-      }
-
-      strong {
-        color: #F7F2EB;
-      }
-    }
+  .wrapper {
+    position: relative; 
   }
   .topFooter {
-    text-align: center;
-    padding: 0 20px 80px;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid #4a4a4a;
-    margin-bottom: 60px;
-    font-size: 20px;
-    @media (min-width: $medium) {
-      font-size: 26px;
-    }
+    padding: 0 0 18em;
+    @media (min-width: $medium) {}
     @media (min-width: $tablet) {
-      font-size: 34px;
-    }
-    @media (min-width: $large) {
-      font-size: 40px;
-    }
-  }
-  .wrapper {
-    position: relative;
-    
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .upperFooter {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 2em;
-    flex-direction: column;
-    @media (min-width: $tablet) {
-      margin-bottom: 6em;
-      flex-direction: row;
-    }
-    
-    .footerLogo {
-      flex: 0 0 15%;
-      a {
-        display: block;
-        &::after {
-          display: none!important;
-        }
-      }
-    }
-    .footerAddresses {
       display: flex;
-      justify-content: flex-end;
-      flex: 1 0 100%;
-      flex-direction: column;
-
-      @media (min-width: $tablet) {
-        flex: 0 0 81%;
-        flex-direction: row;
-      }
-
-      .address {
-        flex: 0 0 25%;
-        padding-right: 1.5em;
-        margin-top: 20px;
-        @media (min-width: $tablet) {
-          margin-top: 0;
-          padding-right: 0;
-          padding-left: 1.5em;
-          flex: 1 0 25%;
-          max-width: 300px;
-        }
-        
-        h5 {
-          font-size: 0.8rem;
-          margin: 0 0 0.75em;
-        }
-        p {
-          display: block;
-          font-size: 0.75rem;
-          margin: 0.15em 0;
-        }
-        .divider {
-          display: block;
-          margin: 0.5em 0;
-          border-bottom: 1px solid #fff;
-        }
-        a {
-          display: inline-block;
-          font-size: 0.75rem;
-          margin: 0.15em 0;
-        }
-      }
     }
-    .footerBackToTop {
-      position: absolute;
-      top: 36px;
-      right: 40px;
-      @media (min-width: $tablet) {
-        flex: 0 0 4%;
-        position: relative;
-        top: auto;
-        right: auto;
-      }
-      a {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        &::after {
-          display: none;
-        }
-      }
-    }
-  }
-  .lowerFooter {
-    display: flex;
-    .footerDetails {
+    @media (min-width: $large) {}
+    .left {
       display: flex;
-      flex-direction: column;
-      flex: 0 0 80%;
-      p {
-        display: block;
-        font-size: .65rem;
-        margin: .8em 0 0;
+      flex: 0 0 50%;
+      h2 {
+        font-size: 30px;
+        max-width: 445px;
+        margin: auto;
       }
     }
-    .footerSocial {
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      flex: 0 0 20%;
-      position: absolute;
-      top: 58px;
-      left: 102px;
-  
-      @media (min-width: $tablet) {
-        position: relative;
-        top: auto;
-        left: auto;
-      }
-      a {
-        svg {
-          margin-left: 1em;
-        }
-        &:hover {
-          &:after {
-            display: none!important;
+    .right {
+      flex: 0 0 50%;
+      .contactContent2 {
+        form {
+          p {
+            margin-bottom: 20px;
+            input {
+              padding: 1em 2em;
+              border: 1px solid #423845;
+              border-radius: 2em;
+              font-size: 1.125rem;
+              width: 100%;
+              background: transparent;
+            }
+            textarea {
+              padding: 1em 2em;
+              border: 1px solid #423845;
+              border-radius: 2em;
+              font-size: 1.125rem;
+              width: 100%;
+              background: transparent;
+            }
+            input[type="tel"] {}
+            input[type="submit"] {
+              color: $black;
+              font-weight: 600;
+              max-width: 175px;
+              width: 100%;
+              padding: .3em 0em .3em 2.25em;
+              box-sizing: content-box;
+              font-size: 1.4rem;
+              float: right;
+              margin-top: 16px;
+              text-align: left;
+              background: url(../images/arrow.svg) no-repeat 79%;
+              &:hover {
+                background: url(../images/arrow.svg) no-repeat 83%;
+              }
+            }
           }
         }
       }
     }
   }
-  
-  
-  
-  
-  a {
-    color: $black;
-    position: relative;
-    &:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      content: "";
-      background: $black;
-      height: 1px;
-      transition: 0.25s ease;
+  .lowerFooter {
+    @media (min-width: $medium) {}
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
     }
-    &:hover {
-      //color: $green;
-      &:after {
-        color: $black;
-        width: 100%;
+    @media (min-width: $large) {}
+    .left {
+      flex: 0 0 50%;
+      max-width: 460px;
+      h2 {
+        font-size: 1.5rem;
+      }
+      ul {
+        list-style: none;
+        columns: 2;
+        margin-bottom: 0;
+        li {
+          @include font1();
+          margin-bottom: 5px;
+          a {
+            color:  $black;
+            font-weight: 100;
+            @include hoverUnderline();
+          }
+        }
       }
     }
-  }
-}
-.wpcf7-form .inputWrapper .inputWrap span {
-  color: $textGrey;
-  font-weight: 200;
-
-  @media (min-width: $tablet) {
-    display: inline-block;
-    position: relative;
-    top: 50px;
-    max-width: calc(100% - 100px);
-  }
-  &:after {
-    content: "" !important;
-  }
-}
-
-.cli-style-v2 .cli-bar-btn_container .cli-plugin-button {
-  font-weight: 500 !important;
-  background-color: transparent !important;
-  border: 1px solid rgb(2, 221, 141) !important;
-  transition: 0.3s ease;
-  &:hover {
-    background-color: $green !important;
+    .right {
+      flex: 0 0 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      a {
+        font-size: 1.4rem;
+        color: $black;
+        margin-bottom: 9px;
+        &.copy {
+          font-size: 1.125rem;
+          margin-top: 1em;
+          span {}
+          img {
+            display: inline-block;
+          }
+        }
+      }
+    }
   }
 }
