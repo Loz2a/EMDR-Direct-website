@@ -69,7 +69,29 @@
       height: 790px;
       width: 1px;
       border: 1px solid #423845;
-      margin: 0 30%;
+      margin: 5em 30%;
+    }
+  }
+
+  &.section2 {
+    h2 {
+      @include subHeading;
+    }
+    .innerText {
+      max-width: 700px;
+      p {
+        font-size: 1.125rem;
+        font-weight: 200;
+        line-height: 1.7;
+      }
+      @media (min-width: $tablet) {
+        margin-bottom: 4em;
+      }
+    }
+    .sub-section {
+      a {
+        @include arrowLink;
+      }
     }
   }
 

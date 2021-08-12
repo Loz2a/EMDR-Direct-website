@@ -24,7 +24,7 @@ Template name: Front page
                 </div>
             </section>
 
-            <section id="section2" class="section home-section home-statement">
+            <section id="section2" class="section home-section section2">
                 <div class="wrapper">
                     <div class="innerWrapper">
                         <h2 class="reveal">How EMDR Works</h2>
@@ -38,7 +38,7 @@ Template name: Front page
                 </div>
             </section>
 
-            <section id="section3" class="section home-section home-statement">
+            <section id="section3" class="section home-section">
                 <div class="wrapper">
                     <div class="innerWrapper">
                         <h2 class="reveal">How EMDR Works</h2>
