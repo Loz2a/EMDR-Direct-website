@@ -276,7 +276,8 @@ html {
 }
 
 .navbar {
-  background-color: $green;
+  background: rgb(247,246,242);
+  background: linear-gradient(0deg, rgba(247,246,242,1) 0%, rgba(242,210,147,1) 100%);
   position: fixed;
   top: 0;
   left: 0;
