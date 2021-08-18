@@ -18,7 +18,11 @@
   }
   .topFooter {
     padding: 0 0 18em;
-    @media (min-width: $medium) {}
+    @media (max-width: 767px) {
+      input, textarea {
+        padding: 0 0 15em;
+      }
+    }
     @media (min-width: $tablet) {
       display: flex;
     }
@@ -30,6 +34,10 @@
         font-size: 30px;
         max-width: 445px;
         margin: auto;
+        @media (max-width: 767px) {
+          font-size: 1rem;
+          margin-bottom: 2em;
+        }
       }
     }
     .right {
@@ -38,6 +46,9 @@
         form {
           p {
             margin-bottom: 20px;
+            @media (max-width: 767px) {
+              margin-bottom: 0;
+            }
             input {
               padding: 1em 2em;
               border: 1px solid #423845;
@@ -54,7 +65,7 @@
               width: 100%;
               background: transparent;
             }
-            input[type="tel"] {}
+            //input[type="tel"] {}
             input[type="submit"] {
               color: $black;
               font-weight: 600;
@@ -73,72 +84,98 @@
                 background-size: 24px;
               }
             }
+            @media (max-width: 767px) {
+              input, textarea {
+                font-size: 1rem;
+              }
+            }
           }
         }
       }
     }
   }
   .lowerFooter {
-    @media (min-width: $medium) {}
-    @media (min-width: $tablet) {
+    h2 {
+      font-size: 1.5rem;
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+    .lowerFooter-inner {
       display: flex;
       justify-content: space-between;
-    }
-    @media (min-width: $large) {}
-    .left {
+      flex-direction: column;
       @media (min-width: $tablet) {
-        flex: 0 0 50%;
-        max-width: 460px;
+        flex-direction: row;
       }
-      h2 {
-        font-size: 1.5rem;
-        @media (max-width: 767px) {
-          text-align: center;
-        }
-      }
-      ul {
-        list-style: none;
+      @media (min-width: $large) {}
+      .left {
+        order: 2;
         margin-bottom: 0;
         @media (min-width: $tablet) {
-          columns: 2;
+          order: 1;
+          flex: 0 0 50%;
+          max-width: 460px;
+          margin-bottom: -26px;
+        }
+        ul {
+          list-style: none;
+          margin-bottom: 0;
+          @media (min-width: $tablet) {
+            columns: 2;
+          }
+          @media (max-width: 767px) {
+            text-align: center;
+          }
+          li {
+            @include font2();
+            margin-bottom: 5px;
+            a {
+              color:  $black;
+              font-weight: 400;
+              @include hoverUnderline();
+            }
+          }
+        }
+      }
+      .right {
+        order: 1;
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        @media (min-width: $tablet) {
+          order: 2;
+          flex: 0 0 50%;
+          max-width: 460px;
         }
         @media (max-width: 767px) {
-          text-align: center;
+          align-items: center;
+          margin: 1em 0 1.5em;
         }
-        li {
+        a {
           @include font2();
-          margin-bottom: 5px;
-          a {
-            color:  $black;
-            font-weight: 400;
-            @include hoverUnderline();
-          }
+          font-size: 1.4rem;
+          color: $black;
+          margin-bottom: 9px;
         }
       }
     }
-    .right {
-      flex: 0 0 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: flex-end;
-      @media (max-width: 767px) {
-        align-items: center;
-        margin-top: 3em;
+    a.copy {
+      @include font2();
+      color: $black;
+      font-size: 1.125rem;
+      margin-top: 1em;
+      float: right;
+      img {
+        display: inline-block;
       }
-      a {
-        @include font2();
-        font-size: 1.4rem;
-        color: $black;
-        margin-bottom: 9px;
-        &.copy {
-          font-size: 1.125rem;
-          margin-top: 1em;
-          span {}
-          img {
-            display: inline-block;
-          }
-        }
+      @media (max-width: 767px) {
+        margin-top: 3em;
+        float: none;
+        display: block;
+        text-align: center;
       }
     }
   }

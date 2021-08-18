@@ -12,29 +12,40 @@
         </div>
     </div>
 
-    <div class="lowerFooter">
-      <div class="left">
-        <h2>EMDR Direct</h2>
-        <?php
-            wp_nav_menu(
-                array(
-                'theme_location' => 'footer'
-                )
-            );
-        ?>
-        <?= get_theme_mod('footer'); ?>
-    </div>
+    
 
-    <div class="right">
-      <a href="tel:">0161 000 0000</a>
-      <a href="mailto:help@emdrdirect.com">help@emdrdirect.com</a>
+    <div class="lowerFooter">
+
+      <h2>EMDR Direct</h2>
+
+      <div class="lowerFooter-inner">
+
+        <div class="left">
+          <?php
+              wp_nav_menu(
+                  array(
+                  'theme_location' => 'footer'
+                  )
+              );
+          ?>
+          <?= get_theme_mod('footer'); ?>
+        </div>
+
+        <div class="right">
+          <a href="tel:">0161 000 0000</a>
+          <a href="mailto:help@emdrdirect.com">help@emdrdirect.com</a>
+        </div>
+
+      </div>
+
       <a class="copy" href="https://holdens.agency/" rel="nofollow" title="Creative Agency Manchester - Holdens" target="_blank">
         <span>Created by</span>
         <img src="https://www.holdens.agency/footer-credit/holdens-logo-black-h.svg">
       </a>
+
     </div>
     
-  </div>
+
 
 </footer>
 
